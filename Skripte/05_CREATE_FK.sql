@@ -1,3 +1,5 @@
+use dbBricoMarche;
+
 ALTER TABLE Benutzer
 ADD
 CONSTRAINT FK_Benutzer_Ort
@@ -80,3 +82,5 @@ ADD CONSTRAINT FK_Video_Schlagwort_Schlagwort
 FOREIGN KEY (Schlagwort_ID)
 REFERENCES Schlagwort(ID);
 GO
+
+use master;

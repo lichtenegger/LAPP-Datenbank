@@ -1,3 +1,5 @@
+use dbBricoMarche;
+
 CREATE UNIQUE INDEX IX_Benutzer ON Benutzer(Benutzername);
 
 CREATE UNIQUE INDEX IX_Gruppe ON Gruppe(Bezeichnung);
@@ -15,3 +17,5 @@ CREATE UNIQUE INDEX IX_Kategorie ON Kategorie(Bezeichnung);
 CREATE UNIQUE INDEX IX_Schlagwort ON Schlagwort(Bezeichnung);
 
 GO
+
+use master;

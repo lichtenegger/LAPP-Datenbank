@@ -1,3 +1,5 @@
+use dbBricoMarche;
+
 CREATE TABLE Benutzer (
 	ID INT IDENTITY(1,1) NOT NULL,
 	Benutzername VARCHAR(50) NOT NULL,
@@ -90,3 +92,5 @@ CREATE TABLE Video_Schlagwort (
 	Schlagwort_ID INT NOT NULL
 );
 GO
+
+use master;

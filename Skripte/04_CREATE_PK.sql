@@ -1,3 +1,5 @@
+use dbBricoMarche;
+
 ALTER TABLE Benutzer
 ADD
 CONSTRAINT PK_Benutzer
@@ -69,3 +71,5 @@ ADD
 CONSTRAINT PK_Video_Schlagwort
 PRIMARY KEY(Video_ID, Schlagwort_ID);
 GO
+
+use master;
