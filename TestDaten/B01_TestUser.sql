@@ -22,9 +22,9 @@ GO
 -- Test: Benutzer
 
 INSERT INTO Benutzer(Benutzername, Vorname, Nachname, Geburtsdatum, 
-					Passwort, Aktiv, Adresse, Ort_ID, Gruppe_ID)
+					Passwort, Adresse, Ort_ID, Gruppe_ID)
 VALUES('test@mail.me', 'Testana', 'Testich', '01.02.1921',
-		HASHBYTES('SHA2_256', 'test'), 1, 'Testweg 12', 
+		HASHBYTES('SHA2_256', 'test'), 'Testweg 12', 
 		(SELECT ID FROM ORT WHERE PLZ = '00000'),
 		(SELECT ID FROM Gruppe WHERE Bezeichnung = 'Tester')
 );
