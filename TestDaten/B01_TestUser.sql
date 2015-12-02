@@ -1,5 +1,24 @@
 use dbBricoMarche;
 
+-- Aufräumen (Umgekehrt)
+
+DELETE FROM Benutzer;
+GO
+DBCC CHECKIDENT(Benutzer, RESEED, 0);
+GO
+DELETE FROM Gruppe;
+GO
+DBCC CHECKIDENT(Gruppe, RESEED, 0);
+GO
+DELETE FROM Ort;
+GO
+DBCC CHECKIDENT(Ort, RESEED, 0);
+GO
+DELETE FROM Land; -- Alle Daten löschen.
+GO
+DBCC CHECKIDENT(Land, RESEED, 0); -- ID auf 0 zurücksetzen.
+GO
+
 -- Test: Land
 
 INSERT INTO Land(Bezeichnung) VALUES('Testanien');
