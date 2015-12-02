@@ -28,7 +28,7 @@ BEGIN
 	INSERT INTO Artikel(Bezeichnung, Preis, Aktiv, Beschreibung, Bild, Kategorie_ID)
 			VALUES(concat('Artikel Nummer ', convert(nvarchar(max), @artikel)), 49.50, 1,
 					'Dieser Artikel eignet sich ideal für Ihr nächstes Heimwerker-Projekt!',
-					(SELECT * FROM OPENROWSET(BULK N'E:hammer-hand_klein.png', SINGLE_BLOB) AS IMPORT),
+					(SELECT * FROM OPENROWSET(BULK N'F:hammer-hand_klein.png', SINGLE_BLOB) AS IMPORT),
 					(@artikel % 5 +1));
 SET @artikel = @artikel +1;
 END
