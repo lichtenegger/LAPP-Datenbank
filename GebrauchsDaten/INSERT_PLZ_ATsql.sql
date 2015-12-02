@@ -34,4 +34,7 @@ INSERT INTO Ort(PLZ, Bezeichnung, Land_ID)
 		FROM temp_plz_at as temp
 			WHERE NOT (temp.Bezeichnung LIKE 'Wien%' AND PLZ % 10 != 0)
 				AND NOT(temp.Bezeichnung LIKE 'Wien%' AND PLZ > 1230)
-				AND temp.Bezeichnung != UPPER(temp.Bezeichnung)
+				AND temp.Bezeichnung != UPPER(temp.Bezeichnung);
+GO
+
+SELECT * FROM Ort;
