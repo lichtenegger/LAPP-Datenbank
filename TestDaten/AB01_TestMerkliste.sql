@@ -2,7 +2,6 @@ use dbBricoMarche;
 
 DELETE FROM Benutzer_Artikel;
 GO
-DBCC CHECKIDENT(Benutzer, RESEED, 1);
 
 INSERT INTO Benutzer_Artikel(Benutzer_ID, Artikel_ID) VALUES(1, 1);
 INSERT INTO Benutzer_Artikel(Benutzer_ID, Artikel_ID) VALUES(1, 2);
